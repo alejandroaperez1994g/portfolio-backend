@@ -3,12 +3,14 @@ import {router as projectRoutes} from './adapters/express/routes/projectRoutes';
 import {skillRouter} from "./adapters/express/routes/skillRoutes";
 import {journeyRoutes} from "./adapters/express/routes/journeyRoutes";
 import {healthRouter} from "./health/healthRouter";
+import cors from "cors";
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 
 app.use(express.json());
+app.use(cors())
 
 app.use("/health", healthRouter)
 
