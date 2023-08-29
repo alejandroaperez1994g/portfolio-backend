@@ -1,7 +1,7 @@
-import express from 'express';
+import {Router} from 'express';
 import {projectController} from "../dependencies";
 
-const router = express.Router();
+const router = Router();
 
 router
     .get("/:id", projectController.getProjectById.bind(projectController))

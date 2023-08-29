@@ -1,8 +1,8 @@
-import express from "express";
+import {Router} from "express";
 
 import {HealthController} from "./healthController";
 
-const healthRouter = express.Router();
+const healthRouter = Router();
 
 const healthController = new HealthController();
 

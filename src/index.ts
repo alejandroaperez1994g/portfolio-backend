@@ -1,4 +1,4 @@
-import express from 'express';
+import express, {Request, Response} from 'express';
 import {router as projectRoutes} from './adapters/express/routes/projectRoutes';
 import {skillRouter} from "./adapters/express/routes/skillRoutes";
 import {journeyRoutes} from "./adapters/express/routes/journeyRoutes";
@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use("/health", healthRouter)
 
-app.use("/", (req, res) => {
+app.get("/", (req: Request, res: Response) => {
     res.status(200).send("Alejandro Portfolio Backend")
 })
 

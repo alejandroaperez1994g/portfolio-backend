@@ -1,7 +1,7 @@
-import express from "express";
+import {Router} from "express";
 import {skillController} from "../dependencies";
 
-export const skillRouter = express.Router();
+export const skillRouter = Router();
 
 skillRouter
     .get("/:id", skillController.getSkillByID.bind(skillController))
