@@ -12,6 +12,10 @@ app.use(express.json());
 
 app.use("/health", healthRouter)
 
+app.use("/", (req, res) => {
+    res.status(200).send("Alejandro Portfolio Backend")
+})
+
 app.use('/api/projects', projectRoutes);
 app.use("/api/skills", skillRouter)
 app.use("/api/journeys", journeyRoutes)
