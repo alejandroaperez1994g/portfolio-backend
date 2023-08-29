@@ -15,7 +15,7 @@ app.use(express.json());
 app.use("/health", healthRouter)
 
 app.get("/", (req: Request, res: Response) => {
-    res.status(200).send("Alejandro Portfolio Backend")
+    res.status(200).send("Alejandro´s Portfolio Backend")
 })
 
 app.use('/api/projects', projectRoutes);
